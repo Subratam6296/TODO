@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>ToDo</title>
+</head>
+
+<body>
+    <div class="app-container">
+        <div class="app-main">
+            <div class="header">
+                <h1>Todo</h1>
+            </div>
+
+            <div class="form-container">
+                <form id="taskForm">
+                    <label for="taskName">Task :</label>
+                    <input type="text" id="taskName" required>
+
+                    <label for="dueDate">Due Date:</label>
+                    <input type="date" id="dueDate">
+
+                    <label for="priority">Priority:</label>
+                    <select id="priority">
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+
+                    <label for="status">Status:</label>
+                    <select id="status">
+                        <option value="todo">To-Do</option>
+                        <option value="inProgress">In Progress</option>
+                        <option value="done">Done</option>
+                    </select>
+
+                    <button type="submit">Add Task</button>
+                </form>
+            </div>           
+
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search tasks">
+                <button type="button" id="searchButton">Search</button>
+            </div>
+
+            <div class="search-results">
+                <h2>Search Results</h2>
+                <div id="searchResultList"></div>
+            </div>
+        </div>
+
+        <div class="app-sidebar">                  
+
+            <div class="task-count">
+                <div id="taskCount"></div>
+            </div>
+
+            <div class="saved-tasks">
+                <h2>Saved Tasks</h2>
+                <div id="savedTaskStack"></div>
+            </div>
+
+            <div class="sidebar-content">
+                <div class="task-container">             
+                    <div id="taskList"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
